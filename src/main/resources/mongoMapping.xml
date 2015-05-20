@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mongoMapping>
+	<id>
+		<name value="sgObjeto" />
+	</id>
+	<references>
+		<mongoReference class="br.com.heck.tutorial.mongo.dto.PersonDto"
+			attrubute="tasks" type="taskDto" />
+		<mongoReference class="br.com.heck.tutorial.mongo.dto.TaskDto"
+			attrubute="works" type="workDto" />
+	</references>
+</mongoMapping>
