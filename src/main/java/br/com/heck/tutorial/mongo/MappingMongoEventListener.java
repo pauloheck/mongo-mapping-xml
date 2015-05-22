@@ -179,15 +179,19 @@ public class MappingMongoEventListener extends AbstractMongoEventListener<Object
                 if (dbo.containsField(field.getName())) {
 
                     for (DBObject dbObject : (List<DBObject>) dbo.get(field.getName())) {
+					
                         DBObject ref = new BasicDBObject();
+						
+						ref.put(REF, mongoRefMap.getType());
+                        dbObjectDbRefs.add(ref);
+						
                         if (mongoMapping.getId() != null) {
                             ref.put(ID_REF, dbObject.get(mongoMapping.getId()));
                         }
                         else {
                             ref.put(ID_REF, dbObject.get(ID));
                         }
-                        ref.put(REF, mongoRefMap.getType());
-                        dbObjectDbRefs.add(ref);
+              
                     }
                     dbo.removeField(field.getName());
                     dbo.put(field.getName(), dbObjectDbRefs);
