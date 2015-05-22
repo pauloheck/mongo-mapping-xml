@@ -32,7 +32,9 @@ public class Main {
         mongoTemplate.save(person);
 
 
-        // List<PersonDto> persons = mongoTemplate.findAll(PersonDto.class);
+        List<PersonDto> persons = mongoTemplate.findAll(PersonDto.class);
+        
+        System.out.println(persons);
 
     }
 }
