@@ -2,6 +2,7 @@ package br.com.heck.tutorial.mongo;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -101,18 +102,27 @@ public class MappingMongoEventListener extends AbstractMongoEventListener<Object
 
             if (mongoRefMapping.containsKey(clazz + PONTO + field.getName())) {
 
-                Object object2 = field.get(source);
-                if (object2 != null) {
-                    for (Object object : (List<?>) object2) {
-                        try {
-                            mongoPersistence.save(object);
-
-                        }
-                        catch (Exception e) {
-                            e.printStackTrace();
+                if (field.get(source) != null) {
+                    if (field.get(source) instanceof Collection<?>) {
+                        for (Object object : (List<?>) field.get(source)) {
+                            save(object);
                         }
                     }
+                    else {
+                        save(field.get(source));
+                    }
                 }
+            }
+        }
+
+
+        private void save(Object object) {
+            try {
+                mongoPersistence.save(object);
+
+            }
+            catch (Exception e) {
+                e.printStackTrace();
             }
         }
     }
@@ -179,19 +189,19 @@ public class MappingMongoEventListener extends AbstractMongoEventListener<Object
                 if (dbo.containsField(field.getName())) {
 
                     for (DBObject dbObject : (List<DBObject>) dbo.get(field.getName())) {
-					
+
                         DBObject ref = new BasicDBObject();
-						
-						ref.put(REF, mongoRefMap.getType());
+
+                        ref.put(REF, mongoRefMap.getType());
                         dbObjectDbRefs.add(ref);
-						
+
                         if (mongoMapping.getId() != null) {
                             ref.put(ID_REF, dbObject.get(mongoMapping.getId()));
                         }
                         else {
                             ref.put(ID_REF, dbObject.get(ID));
                         }
-              
+
                     }
                     dbo.removeField(field.getName());
                     dbo.put(field.getName(), dbObjectDbRefs);
