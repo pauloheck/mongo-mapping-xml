@@ -1,4 +1,4 @@
-package br.com.heck.tutorial.mongo.dto;
+package com.github.pauloheck.mongo.dto;
 
 public abstract class SuperDto {
 
@@ -15,5 +15,5 @@ public abstract class SuperDto {
         this.sgObjeto = sgObjeto;
     }
 
-    
+
 }

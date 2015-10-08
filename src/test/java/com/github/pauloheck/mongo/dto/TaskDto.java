@@ -1,4 +1,4 @@
-package br.com.heck.tutorial.mongo.dto;
+package com.github.pauloheck.mongo.dto;
 
 import java.util.List;
 

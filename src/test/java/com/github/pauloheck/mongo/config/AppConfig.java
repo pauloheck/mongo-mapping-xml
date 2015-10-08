@@ -1,4 +1,4 @@
-package br.com.heck.tutorial.mongo.config;
+package com.github.pauloheck.mongo.config;
 
 import java.net.UnknownHostException;
 
@@ -6,8 +6,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
-import br.com.heck.tutorial.mongo.MappingMongoEventListener;
-import br.com.heck.tutorial.mongo.MongoMapping;
+import com.github.pauloheck.mongo.MappingMongoEventListener;
+import com.github.pauloheck.mongo.MongoMapping;
 
 import com.mongodb.MongoClient;
 

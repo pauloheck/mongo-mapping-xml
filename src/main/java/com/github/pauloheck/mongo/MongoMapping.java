@@ -1,4 +1,4 @@
-package br.com.heck.tutorial.mongo;
+package com.github.pauloheck.mongo;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -26,7 +26,7 @@ import org.w3c.dom.NodeList;
 /**
  * Classe MongoMapping utilizada realizar o load dos dados XML necessarias para
  * salvar os documentos.
- * 
+ *
  * @since 1.0
  * @version 1.0
  * @author Paulo Heck
@@ -58,7 +58,7 @@ public class MongoMapping implements MongoMappingInterface {
     /**
      * Classe MongoMapping utilizada realizar o load dos dados XML necessarias
      * para salvar os documentos.
-     * 
+     *
      * @since 1.0
      * @version 1.0
      * @author Paulo Heck
@@ -69,7 +69,7 @@ public class MongoMapping implements MongoMappingInterface {
         super();
         try {
             this.mongoMappingXml = mongoMappingXml;
-            
+
             loadMappingXML();
         }
         catch (Exception e) {
@@ -85,7 +85,7 @@ public class MongoMapping implements MongoMappingInterface {
      *
      * Metodo utilizado para realizar o carrgementos dos dados de mappeamento do
      * arquivo xml para objetos java
-     * 
+     *
      * @since 1.0
      * @version 1.0
      * @author Paulo Heck
@@ -110,7 +110,7 @@ public class MongoMapping implements MongoMappingInterface {
      *
      * Metodo utilizado para realizar o mapeamento dos dados de referencia para
      * relacionamentos.
-     * 
+     *
      * @since 1.0
      * @version 1.0
      * @author Paulo Heck
@@ -138,7 +138,7 @@ public class MongoMapping implements MongoMappingInterface {
     /**
      *
      * Metodo utilizado para realizar o mapeamento do id.
-     * 
+     *
      * @since 1.0
      * @version 1.0
      * @author Paulo Heck
@@ -158,7 +158,7 @@ public class MongoMapping implements MongoMappingInterface {
      *
      * Metodo utilizado para carregar o arquivo de que contem os dados de
      * maperamento.
-     * 
+     *
      * @since 1.0
      * @version 1.0
      * @author Paulo Heck
@@ -186,7 +186,7 @@ public class MongoMapping implements MongoMappingInterface {
     }
 
     /**
-     * 
+     *
      * Classe Reference utilizada para mapeamento das referencias de
      * relacionamento.
      *
@@ -209,7 +209,7 @@ public class MongoMapping implements MongoMappingInterface {
          *
          * Construtor utilizado para criar objetos de referencia de
          * relacionamento.
-         * 
+         *
          * @since 1.0
          * @version 1.0
          * @author Paulo Heck

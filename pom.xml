@@ -1,52 +1,57 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>br.com.heck.tutorial</groupId>
-	<artifactId>mongo-mapping</artifactId>
+	<groupId>com.github.pauloheck</groupId>
+	<artifactId>mongo-mapping-xml</artifactId>
 	<packaging>jar</packaging>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>mongo-mapping</name>
-	<url>http://maven.apache.org</url>
+	<version>0.1-SNAPSHOT</version>
+	<name>mongo-mapping-xml</name>
 	<dependencies>
 		<dependency>
 			<groupId>org.mongodb</groupId>
 			<artifactId>mongo-java-driver</artifactId>
-			<version>3.0.1</version>
+			<version>3.1.0</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-mongodb</artifactId>
-			<version>1.7.0.RELEASE</version>
+			<version>1.8.0.RELEASE</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.mongodb</groupId>
 					<artifactId>mongo-java-driver</artifactId>
 				</exclusion>
-
 			</exclusions>
 		</dependency>
-
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
-			<version>2.5.3</version>
+			<version>2.6.2</version>
 		</dependency>
+
 		<dependency>
 			<groupId>commons-collections</groupId>
 			<artifactId>commons-collections</artifactId>
 			<version>3.2.1</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.4</version>
 		</dependency>
 
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
 	<build>
-		<finalName>mongo-crud</finalName>
+		<finalName>mongo-mapping-xml</finalName>
 	</build>
 </project>

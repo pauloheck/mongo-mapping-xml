@@ -1,4 +1,4 @@
-package br.com.heck.tutorial.mongo;
+package com.github.pauloheck.mongo;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.mapping.event.AbstractMongoEventListener;
 import org.springframework.util.ReflectionUtils;
 
-import br.com.heck.tutorial.mongo.MongoMapping.Reference;
+import com.github.pauloheck.mongo.MongoMapping.Reference;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
@@ -20,7 +20,7 @@ import com.mongodb.DBObject;
 /**
  * Classe de MappingMongoEventListener utilizada para realizar as conversões
  * necessarias para salvar os documentos.
- * 
+ *
  * @since 1.0
  * @version 1.0
  * @author Paulo Heck
@@ -61,7 +61,7 @@ public class MappingMongoEventListener extends AbstractMongoEventListener<Object
     /**
      * Classe CascadeReflectionUtils utilizada para identificar relacionamento
      * com necessidade de salva sub documentos.
-     * 
+     *
      * @since 1.0
      * @version 1.0
      * @author Paulo Heck
@@ -78,7 +78,7 @@ public class MappingMongoEventListener extends AbstractMongoEventListener<Object
         /**
          *
          * Construtor utilizado para informar source e o mongoMapping.
-         * 
+         *
          * @since 1.0
          * @version 1.0
          * @author Paulo Heck
@@ -131,7 +131,7 @@ public class MappingMongoEventListener extends AbstractMongoEventListener<Object
      * Classe DbRefFieldCallback utilizada para identificar relacionamento com
      * necessidade de realizar o relacionamento $ref e $id com base nos
      * mapeamentos.
-     * 
+     *
      * @since 1.0
      * @version 1.0
      * @author Paulo Heck
@@ -157,7 +157,7 @@ public class MappingMongoEventListener extends AbstractMongoEventListener<Object
          *
          * Construtor utilizado para informar os parametros necessarios para
          * operação.
-         * 
+         *
          * @since 1.0
          * @version 1.0
          * @author Paulo Heck
@@ -213,7 +213,7 @@ public class MappingMongoEventListener extends AbstractMongoEventListener<Object
 
     /**
      * Classe DbIdMapFieldCallback realizar extração do mappeando do ID.
-     * 
+     *
      * @since 1.0
      * @version 1.0
      * @author Paulo Heck
@@ -231,7 +231,7 @@ public class MappingMongoEventListener extends AbstractMongoEventListener<Object
 
         /**
          * Construtor da classe DbIdMapFieldCallback.
-         * 
+         *
          * @since 1.0
          * @version 1.0
          * @author Paulo Heck

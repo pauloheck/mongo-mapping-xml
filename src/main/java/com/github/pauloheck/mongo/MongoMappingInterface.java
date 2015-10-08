@@ -1,8 +1,8 @@
-package br.com.heck.tutorial.mongo;
+package com.github.pauloheck.mongo;
 
 import java.util.Map;
 
-import br.com.heck.tutorial.mongo.MongoMapping.Reference;
+import com.github.pauloheck.mongo.MongoMapping.Reference;
 
 
 public interface MongoMappingInterface {
