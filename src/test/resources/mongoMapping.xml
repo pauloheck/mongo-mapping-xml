@@ -4,9 +4,9 @@
 		<name value="sgObjeto" />
 	</id>
 	<references>
-		<mongoReference class="br.com.heck.tutorial.mongo.dto.PersonDto"
+		<mongoReference class="com.github.pauloheck.mongo.dto.PersonDto"
 			attrubute="tasks" type="taskDto" />
-		<mongoReference class="br.com.heck.tutorial.mongo.dto.TaskDto"
+		<mongoReference class="com.github.pauloheck.mongo.dto.TaskDto"
 			attrubute="works" type="workDto" />
 	</references>
 </mongoMapping>

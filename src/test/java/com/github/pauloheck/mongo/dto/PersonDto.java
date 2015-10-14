@@ -1,4 +1,4 @@
-package br.com.heck.tutorial.mongo.dto;
+package com.github.pauloheck.mongo.dto;
 
 import java.util.List;
 
@@ -62,5 +62,5 @@ public class PersonDto extends SuperDto {
         return "Person [sgObjeto=" + super.getSgObjeto() + ", name=" + name + ", age=" + age + ", tasks=" + tasks + "]";
     }
 
-    
+
 }
